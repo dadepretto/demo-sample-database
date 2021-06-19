@@ -74,6 +74,7 @@
     <Folder Include="_Common" />
     <Folder Include="_Common\Schemas" />
     <Folder Include="Data\Tables" />
+    <Folder Include="AppAdminConsole\Stored Procedures" />
   </ItemGroup>
   <Target Name="BeforeBuild">
     <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
@@ -100,5 +101,30 @@
     <Build Include="History\Product.sql" />
     <Build Include="History\Order.sql" />
     <Build Include="History\OrderDetail.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Employee_Get.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Employee_List.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Employee_Insert.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Employee_Update.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Employee_Delete.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Customer_Get.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Customer_List.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Customer_Insert.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Customer_Update.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Customer_Delete.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Product_Get.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Product_List.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Product_Insert.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Product_Update.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Product_Delete.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Order_Get.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Order_List.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Order_Insert.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Order_Update.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\Order_Delete.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\OrderDetail_Get.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\OrderDetail_List.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\OrderDetail_Insert.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\OrderDetail_Update.sql" />
+    <Build Include="AppAdminConsole\Stored Procedures\OrderDetail_Delete.sql" />
   </ItemGroup>
 </Project>
