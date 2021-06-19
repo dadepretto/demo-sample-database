@@ -6,8 +6,6 @@ create table [Data].[Order] (
     [OrderDate]             datetime2(0)        not null
         constraint [DF_Order_OrderDate] default (sysutcdatetime()),
 
-    [_active]               bit                 not null
-        constraint [DF_Order__active] default (1),
     [_validFrom] datetime2(7) generated always as row start hidden not null,
     [_validTo] datetime2(7) generated always as row end hidden not null,
     period for system_time ([_validFrom], [_validTo]),

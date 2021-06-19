@@ -7,8 +7,6 @@ create table [Data].[Employee] (
     [Email]                 nvarchar(512)       not null,
     [HiringDate]            date                not null,
 
-    [_active]               bit                 not null
-        constraint [DF_Employee__active] default (1),
     [_validFrom] datetime2(7) generated always as row start hidden not null,
     [_validTo] datetime2(7) generated always as row end hidden not null,
     period for system_time ([_validFrom], [_validTo]),
