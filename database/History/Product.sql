@@ -4,7 +4,7 @@ create table [History].[Product] (
     [Name]              nvarchar(64)        not null,
     [Description]       nvarchar(max)       null,
     [Price]             money               not null,
-    [VAT]               integer             not null,
+    [VAT]               numeric(7, 4)      not null,
 
     [_active]           bit                 not null,
     [_validFrom]        datetime2(7)        not null,

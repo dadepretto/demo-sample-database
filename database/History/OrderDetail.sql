@@ -2,7 +2,7 @@ create table [History].[OrderDetail] (
     [OrderDetailId]     uniqueidentifier    not null,
     [ProductId]         uniqueidentifier    not null,
     [Price]             money               not null,
-    [VAT]               integer             not null,
+    [VAT]               numeric(7, 4)       not null,
     [Quantity]          integer             not null,
 
     [_active]           bit                 not null,

@@ -5,7 +5,7 @@ create table [Data].[Product] (
     [Name]                  nvarchar(64)        not null,
     [Description]           nvarchar(max)       null,
     [Price]                 money               not null,
-    [VAT]                   integer             not null,
+    [VAT]                   numeric(7, 4)       not null,
 
     [_validFrom] datetime2(7) generated always as row start hidden not null,
     [_validTo] datetime2(7) generated always as row end hidden not null,
