@@ -1,13 +1,13 @@
 create table [Data].[Product] (
-    [ProductId]         uniqueidentifier    not null
+    [ProductId]             uniqueidentifier    not null
         constraint [DF_Product_ProductId] default (newid()),
-    [Code]              nvarchar(32)        not null,
-    [Name]              nvarchar(64)        not null,
-    [Description]       nvarchar(max)       null,
-    [Price]             money               not null,
-    [VAT]               integer             not null,
+    [Code]                  nvarchar(32)        not null,
+    [Name]                  nvarchar(64)        not null,
+    [Description]           nvarchar(max)       null,
+    [Price]                 money               not null,
+    [VAT]                   integer             not null,
 
-    [_active]           bit                 not null
+    [_active]               bit                 not null
         constraint [DF_Product__active] default (1),
     [_validFrom] datetime2(7) generated always as row start hidden not null,
     [_validTo] datetime2(7) generated always as row end hidden not null,
