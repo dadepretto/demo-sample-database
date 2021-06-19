@@ -1,6 +1,7 @@
 create table [Data].[OrderDetail] (
     [OrderDetailId]         uniqueidentifier    not null
         constraint [DF_OrderDetail_OrderDetailId] default (newid()),
+    [OrderId]               uniquedentifier     not null,
     [ProductId]             uniqueidentifier    not null,
     [ProductPriceWhenAdded] money               not null,
     [ProductVATWhenAdded]   integer             not null,
@@ -12,6 +13,9 @@ create table [Data].[OrderDetail] (
 
     constraint [PK_OrderDetail]
         primary key clustered ([OrderDetailId]),
+    constraint [FK_OrderDetail_Order]
+        foreign key ([OrderId])
+            references [Data].[Order]([OrderId]),
     constraint [FK_OrderDetail_Product]
         foreign key ([ProductId])
             references [Data].[Product]([ProductId])
