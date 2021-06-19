@@ -7,8 +7,6 @@ create table [Data].[Customer] (
     [Email]                 nvarchar(512)       null,
     [Phone]                 nvarchar(32)        null,
 
-    [_active]               bit                 not null
-        constraint [DF_Customer__active] default (1),
     [_validFrom] datetime2(7) generated always as row start hidden not null,
     [_validTo] datetime2(7) generated always as row end hidden not null,
     period for system_time ([_validFrom], [_validTo]),
