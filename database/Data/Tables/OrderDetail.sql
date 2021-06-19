@@ -1,10 +1,10 @@
 create table [Data].[OrderDetail] (
-    [OrderDetailId]     uniqueidentifier    not null
+    [OrderDetailId]         uniqueidentifier    not null
         constraint [DF_OrderDetail_OrderDetailId] default (newid()),
-    [ProductId]         uniqueidentifier    not null,
-    [Price]             money               not null,
-    [VAT]               integer             not null,
-    [Quantity]          integer             not null,
+    [ProductId]             uniqueidentifier    not null,
+    [ProductPriceWhenAdded] money               not null,
+    [ProductVATWhenAdded]   integer             not null,
+    [Quantity]              integer             not null,
 
     [_active]           bit                 not null
         constraint [DF_OrderDetail__active] default (1),
