@@ -22,7 +22,7 @@ begin
         from [Data].[OrderDetail] as [OD]
             inner join [Data].[Product] as [P]
                 on [OD].[ProductId] = [P].[ProductId]
-        where [OrderDetailId] = @OrderDetailId;
+        where [OD].[OrderDetailId] = @OrderDetailId;
 
         commit transaction;
     end try
