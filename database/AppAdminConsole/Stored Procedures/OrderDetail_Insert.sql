@@ -13,7 +13,7 @@ begin
 
     begin transaction;
     begin try
-        if @ProductId is null
+        if @OrderDetailId is null
         begin
             set @OrderDetailId = newid();
         end;
