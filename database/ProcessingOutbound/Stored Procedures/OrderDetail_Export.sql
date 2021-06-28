@@ -66,7 +66,7 @@ begin
             [OOD].[_lastUpdate] = sysutcdatetime()
         from [Outbound].[OrderDetail] as [OOD]
             inner join [Data].[Product] as [DP]
-                on [OOD].[EmployeeId] = [DP].[EmployeeId]
+                on [OOD].[ProductId] = [DP].[ProductId]
                     and [OOD].[_lastUpdate] <= [DP].[_validFrom];
 
         delete from [Outbound].[OrderDetail]
