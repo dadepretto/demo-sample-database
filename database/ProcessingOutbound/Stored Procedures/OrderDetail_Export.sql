@@ -1,4 +1,4 @@
-create procedure [ProcessingOutbound].[Order_Export]
+create procedure [ProcessingOutbound].[OrderDetail_Export]
 as
 declare
     @lastExport datetime2(0)
