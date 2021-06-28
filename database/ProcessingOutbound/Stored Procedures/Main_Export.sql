@@ -1,4 +1,4 @@
-create procedure [ProcessingCRM].[Main_Export]
+create procedure [ProcessingOutbound].[Main_Export]
 as
 begin
     set xact_abort, nocount on;
