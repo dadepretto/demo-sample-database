@@ -3,7 +3,7 @@ create procedure [AppAdminConsole].[Customer_Insert](
     @FirstName nvarchar(64),
     @MiddleName nvarchar(64) = null,
     @LastName nvarchar(64) = null,
-    @Email nvarchar(512) = null,
+    @Email nvarchar(512),
     @Phone nvarchar(32) = null
 )
 as

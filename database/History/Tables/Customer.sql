@@ -3,7 +3,7 @@ create table [History].[Customer] (
     [FirstName]                 nvarchar(64)        not null,
     [MiddleName]                nvarchar(64)        null,
     [LastName]                  nvarchar(64)        null,
-    [Email]                     nvarchar(512)       null,
+    [Email]                     nvarchar(512)       not null,
     [Phone]                     nvarchar(32)        null,
 
     [_validFrom]                datetime2(7)        not null,

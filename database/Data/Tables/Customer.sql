@@ -4,7 +4,7 @@ create table [Data].[Customer] (
     [FirstName]                 nvarchar(64)        not null,
     [MiddleName]                nvarchar(64)        null,
     [LastName]                  nvarchar(64)        null,
-    [Email]                     nvarchar(512)       null,
+    [Email]                     nvarchar(512)       not null,
     [Phone]                     nvarchar(32)        null,
 
     [_validFrom] datetime2(7) generated always as row start hidden not null,
