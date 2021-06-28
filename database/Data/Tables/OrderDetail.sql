@@ -1,11 +1,11 @@
 create table [Data].[OrderDetail] (
-    [OrderDetailId]         uniqueidentifier    not null
+    [OrderDetailId]             uniqueidentifier    not null
         constraint [DF_OrderDetail_OrderDetailId] default (newid()),
-    [OrderId]               uniqueidentifier    not null,
-    [ProductId]             uniqueidentifier    not null,
-    [ProductPriceWhenAdded] money               not null,
-    [ProductVATWhenAdded]   numeric(7, 4)       not null,
-    [Quantity]              integer             not null,
+    [OrderId]                   uniqueidentifier    not null,
+    [ProductId]                 uniqueidentifier    not null,
+    [ProductPriceWhenAdded]     money               not null,
+    [ProductVATWhenAdded]       numeric(7, 4)       not null,
+    [Quantity]                  integer             not null,
 
     [_validFrom] datetime2(7) generated always as row start hidden not null,
     [_validTo] datetime2(7) generated always as row end hidden not null,

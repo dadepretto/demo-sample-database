@@ -1,9 +1,9 @@
 create table [Data].[Order] (
-    [OrderId]               uniqueidentifier    not null
+    [OrderId]                   uniqueidentifier    not null
         constraint [DF_Order_OrderId] default (newid()),
-    [EmployeeId]            uniqueidentifier    null,
-    [CustomerId]            uniqueidentifier    null,
-    [OrderDate]             datetime2(0)        not null
+    [EmployeeId]                uniqueidentifier    null,
+    [CustomerId]                uniqueidentifier    null,
+    [OrderDate]                 datetime2(0)        not null
         constraint [DF_Order_OrderDate] default (sysutcdatetime()),
 
     [_validFrom] datetime2(7) generated always as row start hidden not null,
