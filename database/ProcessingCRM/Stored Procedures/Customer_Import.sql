@@ -37,7 +37,7 @@ begin
         from [InboundCRM].[Customer] as [IC]
             inner join [Data].[Customer] as [DC]
                 on [IC].[Email] = [DC].[Email]
-        where [IC].[_updateDate] >= [DC].[_validFrom];
+                    and [IC].[_updateDate] >= [DC].[_validFrom];
 
         delete from [Data].[Customer]
         where [Email] not in (
