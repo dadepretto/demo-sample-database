@@ -74,16 +74,16 @@ begin
             )
         update [OO]
         set [OO].[OrderId] = [DO].[OrderId],
-            [OO].[EmployeeId] = [OD].[EmployeeId],
-            [OO].[EmployeeFirstName] = [OE].[FirstName],
-            [OO].[EmployeeMiddleName] = [OE].[MiddleName],
-            [OO].[EmployeeLastName] = [OE].[LastName],
-            [OO].[CustomerId] = [OC].[CustomerId],
-            [OO].[CustomerFirstName] = [OC].[FirstName],
-            [OO].[CustomerMiddleName] = [OC].[MiddleName],
-            [OO].[CustomerLastName] = [OC].[LastName],
-            [OO].[CustomerEmail] = [OC].[Email],
-            [OO].[OrderDate] = [OD].[OrderDate],
+            [OO].[EmployeeId] = [DO].[EmployeeId],
+            [OO].[EmployeeFirstName] = [DO].[EmployeeFirstName],
+            [OO].[EmployeeMiddleName] = [DO].[EmployeeMiddleName],
+            [OO].[EmployeeLastName] = [DO].[EmployeeLastName],
+            [OO].[CustomerId] = [DO].[CustomerId],
+            [OO].[CustomerFirstName] = [DO].[CustomerFirstName],
+            [OO].[CustomerMiddleName] = [DO].[CustomerMiddleName],
+            [OO].[CustomerLastName] = [DO].[CustomerLastName],
+            [OO].[CustomerEmail] = [DO].[CustomerEmail],
+            [OO].[OrderDate] = [DO].[OrderDate],
             [OO].[_lastUpdate] = sysutcdatetime()
         from [Outbound].[Order] as [OO]
             inner join [OrderExtended] as [DO]
@@ -91,9 +91,9 @@ begin
                     and [OO].[_lastUpdate] <= [DO].[_validFrom];
 
         update [OO]
-        set [OO].[EmployeeFirstName] = [OE].[FirstName],
-            [OO].[EmployeeMiddleName] = [OE].[MiddleName],
-            [OO].[EmployeeLastName] = [OE].[LastName],
+        set [OO].[EmployeeFirstName] = [DE].[FirstName],
+            [OO].[EmployeeMiddleName] = [DE].[MiddleName],
+            [OO].[EmployeeLastName] = [DE].[LastName],
             [OO].[_lastUpdate] = sysutcdatetime()
         from [Outbound].[Order] as [OO]
             inner join [Data].[Employee] as [DE]
@@ -101,10 +101,10 @@ begin
                     and [OO].[_lastUpdate] <= [DE].[_validFrom];
 
         update [OO]
-        set [OO].[CustomerFirstName] = [OC].[FirstName],
-            [OO].[CustomerMiddleName] = [OC].[MiddleName],
-            [OO].[CustomerLastName] = [OC].[LastName],
-            [OO].[CustomerEmail] = [OC].[Email],
+        set [OO].[CustomerFirstName] = [DC].[FirstName],
+            [OO].[CustomerMiddleName] = [DC].[MiddleName],
+            [OO].[CustomerLastName] = [DC].[LastName],
+            [OO].[CustomerEmail] = [DC].[Email],
             [OO].[_lastUpdate] = sysutcdatetime()
         from [Outbound].[Order] as [OO]
             inner join [Data].[Customer] as [DC]
