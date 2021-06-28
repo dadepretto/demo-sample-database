@@ -82,6 +82,7 @@
     <Folder Include="Outbound\Tables" />
     <Folder Include="ProcessingCRM\Stored Procedures" />
     <Folder Include="ProcessingOutbound\Stored Procedures" />
+    <Folder Include="ProcessingPublicWebsite\Stored Procedures" />
   </ItemGroup>
   <Target Name="BeforeBuild">
     <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
@@ -154,5 +155,7 @@
     <Build Include="ProcessingOutbound\Stored Procedures\Main_Export.sql" />
     <Build Include="ProcessingOutbound\Stored Procedures\Order_Export.sql" />
     <Build Include="ProcessingOutbound\Stored Procedures\OrderDetail_Export.sql" />
+    <Build Include="ProcessingPublicWebsite\Stored Procedures\Main_Import.sql" />
+    <Build Include="ProcessingPublicWebsite\Stored Procedures\CustomerImport.sql" />
   </ItemGroup>
 </Project>
