@@ -77,6 +77,9 @@
     <Folder Include="History\Tables" />
     <Folder Include="AppAdminConsole\Stored Procedures" />
     <Folder Include="AppCustomerProtal\Stored Procedures" />
+    <Folder Include="InboundCRM\Tables" />
+    <Folder Include="InboundPublicWebsite\Tables" />
+    <Folder Include="Outbound\Tables" />
   </ItemGroup>
   <Target Name="BeforeBuild">
     <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
@@ -140,5 +143,9 @@
     <Build Include="AppCustomerProtal\Stored Procedures\OrderDetail_Insert.sql" />
     <Build Include="AppCustomerProtal\Stored Procedures\OrderDetail_Update.sql" />
     <Build Include="AppCustomerProtal\Stored Procedures\OrderDetail_Delete.sql" />
+    <Build Include="InboundCRM\Tables\Customer.sql" />
+    <Build Include="InboundPublicWebsite\Tables\Customer.sql" />
+    <Build Include="Outbound\Tables\Order.sql" />
+    <Build Include="Outbound\Tables\OrderDetail.sql" />
   </ItemGroup>
 </Project>
